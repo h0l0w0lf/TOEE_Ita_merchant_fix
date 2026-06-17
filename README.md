@@ -1,4 +1,4 @@
-# Temple of the Elemental Evil — Patch ITA Merchant Dialog Fix
+# Temple of the Elemental Evil — Patch ITA - Merchant Dialog Fix
 
 Correzione bug dialogo mercanti • Patch ITA v5.0.4
 
