@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOEE Patch ITA 5.0.4 — Fix gd_npc_m2m.mes</title>
+  <style>
+    :root{--bg:#1a1b26;--fg:#e1e2e8;--accent:#7aa2f6;--card:#1f2235;--code-bg:#14151c}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:var(--bg);color:var(--fg);font-family:"Segoe UI",system-ui,sans-serif;line-height:1.6;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem}
+    .container{max-width:720px;width:100%}
+    h1{font-size:1.5rem;color:var(--accent);margin-bottom:.3rem;text-align:center}
+    .subtitle{text-align:center;color:#8892b0;font-size:.9rem;margin-bottom:2rem}
+    .card{background:var(--card);border-radius:10px;padding:1.6rem;margin-bottom:1.4rem;border:1px solid #333}
+    .card h2{font-size:1.05rem;color:var(--accent);margin-bottom:.7rem}
+    .card p,.card li{font-size:.92rem;margin-bottom:.5rem}
+    ul{padding-left:1.2rem}
+    pre{background:var(--code-bg);border-radius:6px;padding:1rem;overflow-x:auto;font-size:.85rem;line-height:1.5;border:1px solid #333}
+    .del{color:#f7768e}.add{color:#9ece6a}
+    footer{text-align:center;color:#565a72;font-size:.8rem;margin-top:1rem}
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1>Temple of the Elemental Evil — Patch ITA - Merchant Dialog Fix</h1>
+    <p class="subtitle">Correzione bug dialogo mercanti &bull; Patch ITA v5.0.4</p>
+
+    <div class="card">
+      <h2>Il problema</h2>
+      <p>Nella patch italiana <strong>v5.0.4</strong> di Temple of the Elemental Evil (disponibile su <a href="https://oldgamesitalia.net/traduzioni/tempio-del-male-elementale" style="color:var(--accent)">OldGamesItalia</a>) è presente un bug nei messaggi di dialogo con i mercanti.</p>
+      <ul>
+        <li>Un personaggio <strong>maschio</strong> chiede di commerciare con un mercante <strong>maschio</strong>.</li>
+        <li>Nel party è presente almeno un NPC.</li>
+        <li>Invece del messaggio corretto (<em>&ldquo;Aspetta che finisca di servire questi altri clienti&rdquo;</em>) appare un errore di <strong>messaggio mancante</strong>.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Causa</h2>
+      <p>Nel file <code>Temple of Elemental Evil/data/mes/gd_npc_m2m.mes</code>, alla riga 126, manca una parentesi graffa all'inizio che rompe il formato del messaggio e la lettura dei messaggi succesivi:</p>
+      <pre><span class="del">- 3600}{All'ultimo sangue!}</span>
+<span class="add">+ {3600}{All'ultimo sangue!}</span></pre>
+    </div>
+
+    <div class="card">
+      <h2>La correzione</h2>
+      <p>Sostituire la riga 126 del file <code>gd_npc_m2m.mes</code> con:</p>
+      <pre>{3600}{All'ultimo sangue!}</pre>
+      <p style="margin-top:.8rem"><strong>Istruzioni rapide:</strong></p>
+      <ol>
+        <li>Scaricare ed installare la patch ITA v5.0.4 da OldGamesItalia.</li>
+        <li>Aprire il file <code>Temple of Elemental Evil/data/mes/gd_npc_m2m.mes</code> con un editor di testo.</li>
+        <li>Va alla riga 126 e aggiungi la parentesi graffa all'inizio</code>.</li>
+        <li>Salvare il file. Il bug è risolto.</li>
+      </ol>
+    </div>
+
+  </div>
+  <footer>Fix non ufficiale &bull; Patch ITA originale a cura di OldGamesItalia</footer>
+</body>
+</html>
