@@ -1,4 +1,4 @@
-# Temple of the Elemental Evil — Patch ITA - Merchant Dialog Fix
+# Temple of the Elemental Evil — Patch ITA Merchant Dialog Fix
 
 Correzione bug dialogo mercanti • Patch ITA v5.0.4
 
@@ -37,4 +37,4 @@ Sostituire la riga 126 del file `gd_npc_m2m.mes` con:
 
 ---
 
-Fix non ufficiale • Patch ITA originale a cura di OldGamesItalia
+Fix non ufficiale • caratterizzazione del bug ed elaborazione della fix ad opera dalla community del canale YouTube di Gweneland • Patch ITA originale a cura di OldGamesItalia
